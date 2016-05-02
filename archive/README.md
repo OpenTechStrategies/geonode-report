@@ -4,7 +4,7 @@ OpenDRI's investment in it.  We keep interview notes and other
 sensitive documents (e.g., hackathon attendance spreadsheets that
 include people's real names and email addresses) in a private
 location.  So if you see something here that you think shouldn't be
-here, please let kfogel {_AT_} opentechstrategies.com know.
+here, please let `kfogel {_AT_} opentechstrategies.com` know.
 
 Sources (a few left out, but search engines can probably find):
 
