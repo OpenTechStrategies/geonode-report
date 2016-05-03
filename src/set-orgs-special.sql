@@ -4,6 +4,8 @@
 * addresses, moves those orgs to their own table, and associates people
 * with orgs, instead of their "upeople" ids (as is normal with VizGrimoire). 
 *
+* This script assumes the existence of a *Grimoire database generated
+* from a git-based repository. 
 */
 
 -- create org table
