@@ -960,6 +960,12 @@
         addType: function(name, graphType) {
             Flotr.graphTypes[name] = graphType;
             Flotr.defaultOptions[name] = graphType.options || {};
+            //Flotr.defaultOptions.defaultType = 'bars';
+            //Flotr.defaultOptions.defaultType = 'whiskers';
+            //Flotr.defaultOptions.defaultType = 'markers';
+            //Flotr.defaultOptions.defaultType = 'points';
+            //Flotr.defaultOptions.defaultType = 'radar';
+            //Flotr.defaultOptions.defaultType = 'lines';
             Flotr.defaultOptions.defaultType = Flotr.defaultOptions.defaultType || name
         },
         addPlugin: function(name, plugin) {
@@ -1091,7 +1097,8 @@
     global.Flotr = Flotr
 })();
 Flotr.defaultOptions = {
-    colors: ["#00A8F0", "#C0D800", "#CB4B4B", "#4DA74D", "#9440ED"],
+    //colors: ["#00A8F0", "#C0D800", "#CB4B4B", "#4DA74D", "#9440ED"],
+    colors: ["black", "green", "purple", "blue"],
     ieBackgroundColor: "#FFFFFF",
     title: null,
     subtitle: null,
@@ -19421,6 +19428,20 @@ if (Viz === undefined) var Viz = {};
     }
 
     function displayTimeToFix(div_id, ttf_data, column, labels, title) {
+        console.log("DEBUG: time to fix labels are");
+        console.log(labels);
+        console.log(column);
+        console.log(title);
+        console.log(div_id);
+        ttf_data.labels = ['99%', '95%', '50%', '25%'];
+        //column = '99%,95%,50%,25%';
+        column = '99%,95%';
+        //column = '50%,25%';
+        console.log(ttf_data);
+        ttf_data.data['99%'] = ttf_data.data['X0.99'];
+        ttf_data.data['95%'] = ttf_data.data['X0.95'];
+        ttf_data.data['50%'] = ttf_data.data['X0.5'];
+        ttf_data.data['25%'] = ttf_data.data['X0.25'];
         displayTimeTo(div_id, ttf_data, column, labels, title)
     }
 
@@ -20823,7 +20844,7 @@ function SCM() {
         scm_authors: {
             divid: "scm_authors",
             column: "authors",
-            name: "Authors",
+            name: "Organizations",
             desc: "Unique authors making changes to the source code",
             action: "commits",
             envision: {
