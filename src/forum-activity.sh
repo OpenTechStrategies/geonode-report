@@ -3,6 +3,6 @@
 # Generate a bar chart about GeoNode users forum activity.
 # See forum-activity.el for how data gets generated.
 
-rm -f users-forum-activity-posts.png
-gnuplot users-forum-activity.plt
-gimp users-forum-activity-posts.png &
+rm -f forum-activity-posts.png
+gnuplot forum-activity.plt
+gimp forum-activity-posts.png &
