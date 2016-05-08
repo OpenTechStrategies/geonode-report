@@ -8,11 +8,11 @@ set xdata time
 set timefmt "%Y%m"
 
 set title "GeoNode Users Google Group: ___CAPTHING___"
-set xlabel "mid-June 2012 - December 2014"
+set xlabel "Jan 2013 - Dec 2014"
 set ylabel "___CAPTHING___"
-set xrange ["201206":"201502"]
 set autoscale y
-set format x ""
+set xrange ["201301":"201412"]
+set format x "%b"
 set format y "%.0f"
 set grid
 set mxtics 1
