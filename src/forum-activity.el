@@ -20,7 +20,7 @@ for now I'd like to concentrate on wrestling with gnuplot."
         (let* ((date
                 (string-to-number
                  (buffer-substring-no-properties
-                  (point) (prog2 (forward-word 1) (point) (forward-char 1)))))
+                  (point) (prog2 (forward-char 6) (point) (forward-char 3)))))
                (posts
                 (string-to-number
                  (buffer-substring-no-properties
