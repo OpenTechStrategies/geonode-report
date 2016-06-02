@@ -9,8 +9,8 @@ for name in geonode-users-stats geonode-dev-stats; do
   echo ""
   echo "Summary of ${name}:"
   echo ""
-  for year in 2010 2011 2012 2013 2014 2015; do
-    for month in 01 02 03 04 05 06 07 08 09 10 11 12; do
+  for year in 2015 2014 2013 2012 2011 2010; do
+    for month in 12 11 10 09 08 07 06 05 04 03 02 01; do
       grep -E " - ${year}/${month}/[0-9]{1,2}" ${name}
     done
   done

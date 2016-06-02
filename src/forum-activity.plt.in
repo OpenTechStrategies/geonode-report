@@ -1,0 +1,24 @@
+# Run-time configuration file for gnuplot.
+# See forum-activity.sh for details.
+
+set encoding iso_8859_1
+set terminal png size 500,312
+set output 'forum-activity-___THING___.png'
+set xdata time
+set timefmt "%Y%m"
+
+set title "GeoNode Users Google Group: ___CAPTHING___"
+set xlabel "Jan 2013 - Dec 2014"
+set ylabel "___CAPTHING___"
+set autoscale y
+set xrange ["201301":"201412"]
+set format x "%b"
+set format y "%.0f"
+set grid
+set mxtics 1
+set mytics 1
+
+set boxwidth 0.7 relative
+set style fill solid
+
+plot 'forum-activity-___THING___.in' using 1:2 notitle with boxes lt 3 lw 1

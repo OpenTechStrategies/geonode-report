@@ -12,6 +12,8 @@ Sources (a few left out, but search engines can probably find):
   "Risiko Risk-in-a-Box: An open source risk modelling platform"
   Presentation by Jonathan Griffin – Geophysicist, AIFDR.
 
+* https://www.gfdrr.org/sites/default/files/publication/GFDRR_Partnership_Charter.pdf
+
 * https://www.gfdrr.org/sites/default/files/publication/GFDRR_Annual_Report_2009.pdf
 
 * https://www.gfdrr.org/sites/default/files/publication/GFDRR_Partnership_Charter_2010.pdf
