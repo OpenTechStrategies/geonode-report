@@ -4,6 +4,10 @@
 # Get all GeoNode issues from github API and store the result as json.
 # Feed that file to this script.
 #
+# where pages is the number of paginated results from GitHub API call
+# for n in pages:
+#     curl github.com/api/GeoNode/geonode/issues?state=all&page=n&per_page=100
+#
 # Call this from the top level of the geonode-reports repository, like:
 # $ python src/rate-issues-1-day.py
 #
@@ -82,7 +86,7 @@ ind = np.arange(N)
 width = 0.35 
 
 p1 = plt.bar(ind, issue_count, width, color='b')
-p2 = plt.bar(ind, closed_count, width, color='g',
+p2 = plt.bar(ind, closed_count, width, color='y',
              bottom=issue_count)
 
 plt.ylabel('Number of issues opened')
