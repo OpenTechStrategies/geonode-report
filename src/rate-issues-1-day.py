@@ -99,7 +99,7 @@ p2 = plt.bar(ind, closed_count, width, color='y',
              bottom=issue_count)
 
 plt.ylabel('Number of issues')
-plt.title('Issues opened each month / those closed within one day')
+plt.title('Issues opened each month, and those closed within one day.')
 plt.xticks(np.arange(0, N, 12), ('Dec 2009', 'Dec 2010','Dec 2011','Dec 2012','Dec 2013','Dec 2014','Dec 2015'))
 plt.yticks(np.arange(0, 170, 10))
 plt.legend((p1[0], p2[0]), ('Number of issues opened', 'Portion of them closed within 1 day'))
