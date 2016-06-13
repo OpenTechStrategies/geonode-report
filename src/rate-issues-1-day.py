@@ -32,13 +32,10 @@ with open('issues-list-safe.json') as data_file:
 month_years = {}
 # loop over issue_data['issues'] and count issues per month
 for issue in issue_data['issues']:
+
     # ignore pull requests
-    try:
-        issue['pull_request']
+    if issue.has_key('pull_request'):
         continue
-    except:
-        # if this isn't a pull request, carry on
-        None
         
     created_date = parse(issue['created_at'])
     closed_date = None
@@ -54,9 +51,9 @@ for issue in issue_data['issues']:
     # add month-year array element to an array of month-years, and
     # increment a counter in that element (to account for out-of-order
     # issues)
-    try:
+    if month_years.has_key(this_month_year):
         month_years[this_month_year]['issue_counter'] +=1
-    except:
+    else:
         month_years[this_month_year] = {'issue_counter': 1, 'closed_counter': 0}
 
     # Filter the issues based on time-to-close.  Each issue has "closed_at"
