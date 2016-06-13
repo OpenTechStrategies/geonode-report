@@ -82,7 +82,7 @@ sorted_months = sorted(month_years.items(), key=operator.itemgetter(0))
 
 for month, counts in sorted_months:
     months.append(month)
-    issue_count.append(counts['issue_counter'])
+    issue_count.append(counts['issue_counter'] - counts['closed_counter'])
     closed_count.append(counts['closed_counter'])
 
 
@@ -98,11 +98,11 @@ p1 = plt.bar(ind, issue_count, width, color='b')
 p2 = plt.bar(ind, closed_count, width, color='y',
              bottom=issue_count)
 
-plt.ylabel('Number of issues opened')
-plt.title('Issues: all and those closed within one day')
-plt.xticks(np.arange(0, N, 12), ('December 2009', 'December 2010','December 2011','December 2012','December 2013','December 2014','December 2015'))
+plt.ylabel('Number of issues')
+plt.title('Issues opened each month / those closed within one day')
+plt.xticks(np.arange(0, N, 12), ('Dec 2009', 'Dec 2010','Dec 2011','Dec 2012','Dec 2013','Dec 2014','Dec 2015'))
 plt.yticks(np.arange(0, 170, 10))
-plt.legend((p1[0], p2[0]), ('Number of issues', 'Number of issues closed in a day or less'))
+plt.legend((p1[0], p2[0]), ('Number of issues opened', 'Portion of them closed within 1 day'))
 
 plt.show()
 
