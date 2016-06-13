@@ -29,7 +29,13 @@ import numpy as np
 with open('issues-list-safe.json') as data_file:    
     issue_data = json.load(data_file)
 
+# A dictionary whose keys are strings of the form 'YYYY-MM' and whose
+# values are subdictionaries.  The possible keys in each subdictionary
+# are 'issue_counter' and 'closed_counter'.  The values are,
+# respectively, the count of issues opened in that month, and the
+# number of those issues that were closed within 1 day.
 month_years = {}
+
 # loop over issue_data['issues'] and count issues per month
 for issue in issue_data['issues']:
 
