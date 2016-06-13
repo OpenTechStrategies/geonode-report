@@ -11,6 +11,12 @@
 # Call this from the top level of the geonode-reports repository, like:
 # $ python src/rate-issues-1-day.py
 #
+# You might need to install Python non-core packages 'dateutils' and
+# 'matplotlib'.  There are various ways to do this, one of which is:
+#
+# $ sudo pip install dateutils
+# $ sudo pip install matplotlib
+
 import json
 from pprint import pprint
 from dateutil.parser import parse
