@@ -31,3 +31,5 @@ Sources (a few left out, but search engines can probably find):
 * http://www.worldbank.org/content/dam/Worldbank/Feature%20Story/japan/pdf/101414_event/UR-Policy_Note.pdf
 
 * http://www-wds.worldbank.org/external/default/WDSContentServer/WDSP/T_MNA/2016/01/08/090224b08403c9d8/1_0/Rendered/PDF/GFDRR0annual0r00resilience0to0scale.pdf (added "-AR15" to the filename)
+
+* https://www.gfdrr.org/sites/default/files/publication/OpenDRI%20Policy%20Note.pdf
