@@ -33,3 +33,5 @@ Sources (a few left out, but search engines can probably find):
 * http://www-wds.worldbank.org/external/default/WDSContentServer/WDSP/T_MNA/2016/01/08/090224b08403c9d8/1_0/Rendered/PDF/GFDRR0annual0r00resilience0to0scale.pdf (added "-AR15" to the filename)
 
 * https://www.gfdrr.org/sites/default/files/publication/OpenDRI%20Policy%20Note.pdf
+
+* https://www.gfdrr.org/sites/gfdrr/files/publication/Crowdsourced%20Geographic%20Information%20Use%20in%20Government.pdf
