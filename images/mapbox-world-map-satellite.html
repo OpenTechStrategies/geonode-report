@@ -1,0 +1,29 @@
+<!-- from https://www.mapbox.com/mapbox-gl-js/example/satellite-map/ on 2016-06-24 -->
+<html>
+<head>
+    <meta charset='utf-8' />
+    <title></title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.20.1/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.20.1/mapbox-gl.css' rel='stylesheet' />
+    <style>
+        body { margin:0; padding:0; }
+        #map { position:absolute; top:0; bottom:0; width:100%; }
+    </style>
+</head>
+<body>
+
+<div id='map'></div>
+<script>
+mapboxgl.accessToken = 'pk.eyJ1Ijoib3RzbWFwcyIsImEiOiJjaXB0dWZ4Z2MwNm14ZmxtMnNhN2o4MWprIn0.RqqUhXAYhtKoWmEnsJN9Hw';
+var map = new mapboxgl.Map({
+    container: 'map',
+    zoom: 9,
+    center: [137.9150899566626, 36.25956997955441],
+    style: 'mapbox://styles/mapbox/satellite-v9',
+    hash: false
+});
+</script>
+
+</body>
+</html>
