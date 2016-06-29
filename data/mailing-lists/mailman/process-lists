@@ -1,0 +1,26 @@
+#!/bin/sh
+# -*- mode: shell-script -*-
+
+# Do various processing/analysis of GeoNode lists.
+# 
+# Right now all this does is print the unique Subject lines from 
+# Feb 2015 - May 2016.
+
+months_re="(January|February|March|April|May|June|July|August|September|October|November|December)"
+
+for list in users devel; do
+  echo "### In geonode-${list}-2015-2016:"
+  echo ""
+  cd geonode-${list}-2015-2016
+  gunzip --force --keep *.gz
+  grep -i -E "^Subject:" *.txt                     \
+    | sed -r -e "s/^201[56]-${months_re}.txt://g"  \
+    | sed -r -e "s/Subject: //g"                   \
+    | sed -r -e "s/Subject://g"                    \
+    | sed -r -e "s/\[GeoNode-${list}\]//g"         \
+    | sed -r -e "s/^Re://g"                        \
+    | sed -r -e "s/^ +//g"                         \
+    | sort | uniq
+  echo ""
+  cd ..
+done
