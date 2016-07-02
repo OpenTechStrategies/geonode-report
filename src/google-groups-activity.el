@@ -1,10 +1,11 @@
 ;; Elisp to created input files for gnuplot.
 
 (defun activity-by-date ()
-  "Convert forum activity data lines into gnuplot input.
+  "Convert Google Groups activity data lines into gnuplot input.
 Invoke this in the leftmost column at the top of a series of lines,
 each line in the format DATE TOTAL_POSTS TOTAL_VIEWS (most likely
-created via Emacs macro from, e.g., ../data/geonode-users-stats).
+created via Emacs macro from, e.g.,
+../data/mailing-lists/google-groups/geonode-*-stats).
 
 A buffer named \"u-tmp\" must exist or this function will raise an
 error.  After the function is done, buffer \"u-tmp\" contains the data
@@ -14,8 +15,8 @@ for now I'd like to concentrate on wrestling with gnuplot."
   (save-excursion
     (let ((posts-by-date (make-hash-table :size 700))
           (views-by-date (make-hash-table :size 700))
-          (posts-output  (find-file-noselect "forum-activity-posts.in"))
-          (views-output  (find-file-noselect "forum-activity-views.in")))
+          (posts-output  (find-file-noselect "google-groups-activity-posts.in"))
+          (views-output  (find-file-noselect "google-groups-activity-views.in")))
       (while (looking-at "^201[0-9]+ ")
         (let* ((date
                 (string-to-number
@@ -49,9 +50,10 @@ for now I'd like to concentrate on wrestling with gnuplot."
           (sort-lines nil (point-min) (point-max))
           (save-buffer))))))
         
-;;; ----------------------------------------------------------------------- ;;;
-;;; everything below here is data massaged from ../data/geonode-users-stats ;;;
-;;; ----------------------------------------------------------------------- ;;;
+;;; ---------------------------------------------------------------------- ;;;
+;;;           everything below here is data massaged from                  ;;;
+;;;       ../data/mailing-lists/google-groups/geonode-*-stats              ;;;
+;;; ---------------------------------------------------------------------- ;;;
 
 20141230 7 47
 20141229 3 28
