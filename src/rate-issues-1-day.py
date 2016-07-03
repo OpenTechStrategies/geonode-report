@@ -26,7 +26,7 @@ import operator
 import matplotlib.pyplot as plt
 import numpy as np
 
-with open('issues-list-safe.json') as data_file:    
+with open('data/issues-list-safe.json') as data_file:    
     issue_data = json.load(data_file)
 
 # A dictionary whose keys are strings of the form 'YYYY-MM' and whose
